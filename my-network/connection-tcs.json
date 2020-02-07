@@ -1,0 +1,71 @@
+{
+    "name": "my-network-tcs",
+    "version": "1.0.0",
+    "client": {
+        "organization": "tcs",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "tcs": {
+            "mspid": "tcsMSP",
+            "peers": [
+                "peer0.tcs.site.com",
+                "peer1.tcs.site.com",
+                "peer2.tcs.site.com"
+            ],
+            "certificateAuthorities": [
+                "ca.tcs.site.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.tcs.site.com": {
+            "url": "grpcs://localhost:10051",
+            "tlsCACerts": {
+                "path": "crypto-config/peerOrganizations/tcs.site.com/tlsca/tlsca.tcs.site.com-cert.pem"
+            },
+            "grpcOPtions": {
+                "ssl-target-name-override": "peer0.tcs.site.com",
+                "hostnameOverride": "peer0.tcs.site.com"
+            }
+        },
+        "peer1.tcs.site.com": {
+            "url": "grpcs://localhost:11051",
+            "tlsCACerts": {
+                "path": "crypto-config/peerOrganizations/tcs.site.com/tlsca/tlsca.tcs.site.com-cert.pem"
+            },
+            "grpcOPtions": {
+                "ssl-target-name-override": "peer1.tcs.site.com",
+                "hostnameOverride": "peer1.tcs.site.com"
+            }
+        },
+        "peer2.tcs.site.com": {
+            "url": "grpcs://localhost:12051",
+            "tlsCACerts": {
+                "path": "crypto-config/peerOrganizations/tcs.site.com/tlsca/tlsca.tcs.site.com-cert.pem"
+            },
+            "grpcOPtions": {
+                "ssl-target-name-override": "peer2.tcs.site.com",
+                "hostnameOverride": "peer2.tcs.site.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.tcs.site.com": {
+            "url": "https://localhost:10054",
+            "caName": "ca-tcs",
+            "tlsCACerts": {
+                "path": "crypto-config/peerOrganizations/tcs.site.com/ca/ca.tcs.site.com-cert.pem"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
