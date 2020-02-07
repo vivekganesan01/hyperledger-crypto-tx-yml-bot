@@ -1,0 +1,10 @@
+*idea
+*.yaml
+*.json
+delete.sh
+my-network/crypto-config/*
+my-network/channel-artifacts/*
+my-network/*.yaml
+my-network/*.json
+my-network/config.ini
+!my-network/peer-base.yaml
