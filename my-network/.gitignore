@@ -3,3 +3,4 @@ crypto-config/*
 *.json
 config.ini
 channel-artifacts/*
+!peer-base.yaml
