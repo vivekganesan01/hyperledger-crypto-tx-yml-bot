@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ORDERER_GENESIS_PROFILE=OrgsOrdererGenesis
-SYS_CHANNEL=my-sys-channel-name
-CHANNEL_NAME=my-channel
-CHANNEL_PROFILE_NAME=OrgsChannel
-ORG_NAMES="cts tcs"
+ORDERER_GENESIS_PROFILE=ORG_ORDERER_GENESIS_PROFILE
+SYS_CHANNEL=ORG_SYS_CHANNEL
+CHANNEL_NAME=ORG_CHANNEL_NAME
+CHANNEL_PROFILE_NAME=ORG_CHANNEL_PROFILE_NAME
+ORG_NAMES=LIST_ORG_NAMES
 
 # step 1:  setup the environmental variable
 echo "#########################################################"

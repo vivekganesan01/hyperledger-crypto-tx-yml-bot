@@ -72,9 +72,8 @@ class PrivateKeyReplacer:
             _org_header = 'org{}'.format(each_org)
             _org_name = self.config[_org_header]['Name']
             list_of_org.append(_org_name)
-        space = ' '
-        shell_list_org = space.join(list_of_org)
-        self.tokenizer(self.start_up_sh, 'LIST_ORG_NAMES', shell_list_org)
+        shell_list_org = " ".join(list_of_org)
+        self.tokenizer(self.start_up_sh, 'LIST_ORG_NAMES', '"{}"'.format(shell_list_org))
         print(' * - end.')
 
 

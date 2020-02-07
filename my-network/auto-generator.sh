@@ -31,6 +31,8 @@ python3 ./util/connection_file_generator.py
 echo "##########################################################"
 echo "##### Replace private key ################"
 echo "##########################################################"
+echo "copying start-up.sh from original backup"
+cp start-up.sh.bak start-up.sh
 python3 ./util/update_private_keys.py
 
 
