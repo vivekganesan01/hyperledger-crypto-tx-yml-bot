@@ -1,4 +1,5 @@
 crypto-config/*
 *.yaml
+*.json
 config.ini
 channel-artifacts/*
